@@ -73,6 +73,22 @@ export default function Sidebar() {
 
           <li>
             <Link
+              href="/dashboard/ebitda"
+              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                isActive("/dashboard/ebitda")
+                  ? "bg-primary-hover text-white"
+                  : "hover:bg-primary-hover"
+              }`}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+              <span>Evolución EBITDA</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link
               href="/dashboard/charts"
               className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                 isActive("/dashboard/charts")
