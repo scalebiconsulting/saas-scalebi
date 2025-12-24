@@ -14,7 +14,14 @@ import {
   PieChart,
   Users,
   Activity,
-  Package
+  Package,
+  Calendar,
+  CalendarRange,
+  CalendarClock,
+  BookOpen,
+  Wand2,
+  Users2,
+  Database
 } from "lucide-react";
 import NavItem from "./NavItem";
 import NavSection from "./NavSection";
@@ -80,7 +87,11 @@ export default function Sidebar() {
             <SubMenuItem href="/dashboard/charts/flujo-mensual" icon={Activity} label="Flujo Mensual" />
             <SubMenuItem href="/dashboard/charts/tipo-proveedores" icon={Package} label="Tipo Proveedores" />
           </NavItemWithSubmenu>
-          <NavItem href="/dashboard/comparativos" icon={TrendingUp} label="Comparativos" />
+          <NavItemWithSubmenu icon={TrendingUp} label="Comparativos" basePath="/dashboard/comparativos">
+            <SubMenuItem href="/dashboard/comparativos/mes-vs-mes" icon={Calendar} label="Mes vs Mes" />
+            <SubMenuItem href="/dashboard/comparativos/analisis-trimestral" icon={CalendarRange} label="Análisis trimestral" />
+            <SubMenuItem href="/dashboard/comparativos/ano-vs-ano" icon={CalendarClock} label="Año vs Año" />
+          </NavItemWithSubmenu>
         </NavSection>
 
         <NavSection title="REPORTES">
@@ -88,11 +99,16 @@ export default function Sidebar() {
         </NavSection>
 
         <NavSection title="GESTIÓN DE DATOS">
-          <NavItem href="/dashboard/upload" icon={Layers} label="Clasificador Facturas" badge={212} />
+          <NavItem href="/dashboard/upload" icon={Layers} label="Clasificador Facturas" />
         </NavSection>
 
         <NavSection title="SISTEMA">
-          <NavItem href="/dashboard/configuracion" icon={Settings} label="Configuración" />
+          <NavItemWithSubmenu icon={Settings} label="Configuración" basePath="/dashboard/configuracion">
+            <SubMenuItem href="/dashboard/configuracion/plan-cuentas" icon={BookOpen} label="Plan de Cuentas" />
+            <SubMenuItem href="/dashboard/configuracion/reglas-clasificacion" icon={Wand2} label="Reglas Auto.Clasificación" />
+            <SubMenuItem href="/dashboard/configuracion/proveedores-frecuentes" icon={Users2} label="Proveedores Frecuentes" />
+            <SubMenuItem href="/dashboard/configuracion/respaldos" icon={Database} label="Respaldos" />
+          </NavItemWithSubmenu>
         </NavSection>
       </nav>
 
