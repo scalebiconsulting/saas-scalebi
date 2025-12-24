@@ -13,7 +13,7 @@ interface NavItemWithSubmenuProps {
 
 export default function NavItemWithSubmenu({ icon: Icon, label, children, basePath }: NavItemWithSubmenuProps) {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   
   // Check if any child route is active
