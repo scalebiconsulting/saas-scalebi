@@ -1,22 +1,22 @@
 
 "use client"
 
-import Image from "next/image"
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth" })
-  }
+  // const scrollToSection = (id: string) => {
+  //   const element = document.getElementById(id)
+  //   element?.scrollIntoView({ behavior: "smooth" })
+  // }
 
   return (
-    <footer className="bg-[#0f1f2e] text-gray-300">
+    <footer className="bg-white text-gray-300">
       <div className="w-full px-12 sm:px-20 lg:px-32 py-20">
         <div className="grid md:grid-cols-4 gap-24">
           {/* Logo y descripción */}
-          <div className="md:col-span-2 flex items-start gap-6">
+          {/* <div className="md:col-span-2 flex items-start gap-6">
             <Image
               src="/logo_scale_bi_1080x1080px.png"
               alt="ScaleBI Logo"
@@ -28,10 +28,10 @@ export default function Footer() {
               Transformamos datos en decisiones inteligentes. Soluciones de Business Intelligence, 
               Machine Learning y automatización para escalar tu negocio.
             </p>
-          </div>
+          </div> */}
 
           {/* Enlaces rápidos */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold mb-4">Enlaces</h3>
             <ul className="space-y-2">
               <li>
@@ -67,10 +67,10 @@ export default function Footer() {
                 </button>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contacto */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
@@ -95,21 +95,24 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Línea divisoria */}
         <div className="border-t border-gray-700 mt-10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 text-sm">
               © {currentYear} ScaleBI. Todos los derechos reservados.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-[#e8d4b0] transition">
+              <a href="#" className="text-gray-600 hover:text-[#e8d4b0] transition">
                 Política de Privacidad
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#e8d4b0] transition">
+              <a href="#" className="text-gray-600 hover:text-[#e8d4b0] transition">
                 Términos de Servicio
+              </a>
+              <a href="#" className="text-gray-600 hover:text-[#e8d4b0] transition">
+                Contacto
               </a>
             </div>
           </div>
