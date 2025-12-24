@@ -1,6 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { 
+  TrendingUp, 
+  TrendingDown, 
+  DollarSign, 
+  Upload, 
+  FileText, 
+  BarChart3, 
+  Download 
+} from "lucide-react";
 
 export default function DashboardPage() {
   return (
@@ -26,9 +35,7 @@ export default function DashboardPage() {
               </p>
             </div>
             <div className="icon-container icon-success">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
+              <TrendingUp className="w-6 h-6" strokeWidth={2} />
             </div>
           </div>
           <span className="badge badge-positive">+12.5% vs mes anterior</span>
@@ -45,9 +52,7 @@ export default function DashboardPage() {
               </p>
             </div>
             <div className="icon-container icon-error">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
-              </svg>
+              <TrendingDown className="w-6 h-6" strokeWidth={2} />
             </div>
           </div>
           <span className="badge badge-negative">+5.2% vs mes anterior</span>
@@ -64,9 +69,7 @@ export default function DashboardPage() {
               </p>
             </div>
             <div className="icon-container icon-success">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <DollarSign className="w-6 h-6" strokeWidth={2} />
             </div>
           </div>
           <span className="badge badge-positive">43.4% margen</span>
@@ -99,9 +102,7 @@ export default function DashboardPage() {
               className="w-12 h-12 rounded-lg flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)' }}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-              </svg>
+              <Upload className="w-6 h-6 text-white" strokeWidth={2} />
             </div>
             <div>
               <p className="font-semibold" style={{ color: '#0a1628', marginBottom: '2px' }}>Cargar Datos</p>
@@ -129,9 +130,7 @@ export default function DashboardPage() {
               className="w-12 h-12 rounded-lg flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)' }}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
+              <FileText className="w-6 h-6 text-white" strokeWidth={2} />
             </div>
             <div>
               <p className="font-semibold" style={{ color: '#0a1628', marginBottom: '2px' }}>Ver EERR</p>
@@ -159,9 +158,7 @@ export default function DashboardPage() {
               className="w-12 h-12 rounded-lg flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)' }}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
+              <BarChart3 className="w-6 h-6 text-white" strokeWidth={2} />
             </div>
             <div>
               <p className="font-semibold" style={{ color: '#0a1628', marginBottom: '2px' }}>Gráficas</p>
@@ -189,9 +186,7 @@ export default function DashboardPage() {
               className="w-12 h-12 rounded-lg flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)' }}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+              <Download className="w-6 h-6 text-white" strokeWidth={2} />
             </div>
             <div>
               <p className="font-semibold" style={{ color: '#0a1628', marginBottom: '2px' }}>Exportar</p>
