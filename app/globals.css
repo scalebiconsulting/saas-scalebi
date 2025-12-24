@@ -1,38 +1,253 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #1a2e3e;
-  --primary-hover: #2d4a5e;
-  --secondary: #f1f5f9;
-  --success: #10b981;
-  --danger: #ef4444;
+  /* Navy Colors */
+  --navy-900: #0a1628;
+  --navy-800: #111d35;
+  --navy-700: #1a2744;
+  --navy-600: #243352;
+  
+  /* Backgrounds */
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  
+  /* Accent Colors */
+  --blue-accent: #3b82f6;
+  --blue-accent-dark: #1d4ed8;
+  --green-success: #10b981;
+  --orange-warning: #f59e0b;
+  --red-error: #ef4444;
+  
+  /* Text Colors */
+  --text-primary: #0a1628;
   --text-muted: #64748b;
+  
+  /* Badge Colors */
+  --badge-green-bg: #d1fae5;
+  --badge-green-text: #10b981;
+  --badge-red-bg: #fee2e2;
+  --badge-red-text: #ef4444;
+  --badge-yellow-bg: #fef3c7;
+  --badge-yellow-text: #f59e0b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-hover: var(--primary-hover);
-  --color-secondary: var(--secondary);
-  --color-success: var(--success);
-  --color-danger: var(--danger);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-bg-main: var(--bg-main);
+  --color-bg-card: var(--bg-card);
+  --color-blue-accent: var(--blue-accent);
+  --color-blue-accent-dark: var(--blue-accent-dark);
+  --color-green-success: var(--green-success);
+  --color-orange-warning: var(--orange-warning);
+  --color-red-error: var(--red-error);
+  --color-text-primary: var(--text-primary);
   --color-text-muted: var(--text-muted);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Classes */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.kpi-value {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* Card Styles */
+.dashboard-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07), 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.dashboard-card.card-positive {
+  border-top: 4px solid var(--green-success);
+}
+
+.dashboard-card.card-negative {
+  border-top: 4px solid var(--red-error);
+}
+
+.dashboard-card.card-warning {
+  border-top: 4px solid var(--orange-warning);
+}
+
+.dashboard-card.card-primary {
+  border-top: 4px solid var(--blue-accent);
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-positive {
+  background: var(--badge-green-bg);
+  color: var(--badge-green-text);
+}
+
+.badge-negative {
+  background: var(--badge-red-bg);
+  color: var(--badge-red-text);
+}
+
+.badge-warning {
+  background: var(--badge-yellow-bg);
+  color: var(--badge-yellow-text);
+}
+
+/* Button Primary */
+.btn-primary {
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-900));
+  color: white;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(10, 22, 40, 0.15);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 22, 40, 0.25);
+}
+
+/* Table Styles */
+.dashboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.dashboard-table thead {
+  background: var(--navy-800);
+  color: white;
+}
+
+.dashboard-table thead th {
+  padding: 12px 16px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.dashboard-table thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.dashboard-table thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.dashboard-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.dashboard-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.dashboard-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dashboard-table .numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Icon Containers */
+.icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container.icon-success {
+  background: var(--badge-green-bg);
+  color: var(--green-success);
+}
+
+.icon-container.icon-error {
+  background: var(--badge-red-bg);
+  color: var(--red-error);
+}
+
+.icon-container.icon-warning {
+  background: var(--badge-yellow-bg);
+  color: var(--orange-warning);
+}
+
+.icon-container.icon-primary {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--blue-accent);
+}
+
+/* Animations */
+@keyframes pulse-sync {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.sync-indicator {
+  animation: pulse-sync 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Utilities */
+.gradient-navy {
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+}
+
+.transition-smooth {
+  transition: all 0.2s ease;
 }
