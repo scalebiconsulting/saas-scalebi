@@ -13,8 +13,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-white text-gray-300">
-      <div className="w-full px-12 sm:px-20 lg:px-32 py-20">
-        <div className="grid md:grid-cols-4 gap-24">
+      <div className="w-full px-4 sm:px-8 lg:px-20 xl:px-32 py-10 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-16 xl:gap-24">
           {/* Logo y descripción */}
           {/* <div className="md:col-span-2 flex items-start gap-6">
             <Image

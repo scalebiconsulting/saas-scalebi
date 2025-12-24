@@ -124,13 +124,13 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-20 bg-white">
-      <div className="w-full px-6 lg:px-80">
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+    <section id="features" className="py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="w-full px-4 sm:px-8 lg:px-20 xl:px-40 2xl:px-60">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Left Column - FAQs */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8">
-            <h2 className="flex items-center gap-3 text-xl font-bold text-gray-900 mb-6">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
+            <h2 className="flex items-center gap-2 sm:gap-3 text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                 <line x1="12" y1="17" x2="12.01" y2="17"></line>
@@ -138,29 +138,29 @@ export default function Features() {
               Preguntas Frecuentes
             </h2>
             
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-gray-100 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
-                  <p className="text-sm text-gray-600">{faq.answer}</p>
+                <div key={index} className="bg-gray-100 rounded-lg p-3 sm:p-4">
+                  <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{faq.question}</h4>
+                  <p className="text-xs sm:text-sm text-gray-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Right Column - Steps */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8">
-            <div className="space-y-4">
+          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
+            <div className="space-y-3 sm:space-y-4">
               {steps.map((step, index) => (
-                <div key={index} className="bg-white rounded-xl border border-gray-200 p-5 flex items-start gap-4">
-                  <div className={`w-12 h-12 ${step.bgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                    <div className="w-6 h-6">
+                <div key={index} className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 lg:p-5 flex items-start gap-3 sm:gap-4">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 ${step.bgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                    <div className="w-5 h-5 sm:w-6 sm:h-6">
                       {step.icon}
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <strong className="text-gray-900 mb-1">{step.title}</strong>
-                    <span className="text-sm text-gray-600">{step.description}</span>
+                    <strong className="text-gray-900 mb-1 text-sm sm:text-base">{step.title}</strong>
+                    <span className="text-xs sm:text-sm text-gray-600">{step.description}</span>
                   </div>
                 </div>
               ))}
@@ -169,19 +169,19 @@ export default function Features() {
         </div>
 
         {/* Modules Section - Full width below */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-8">
-          <h4 className="text-sm font-semibold text-gray-500 mb-6 tracking-wide">
+        <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
+          <h4 className="text-xs sm:text-sm font-semibold text-gray-500 mb-4 sm:mb-6 tracking-wide">
             6 Módulos Incluidos
           </h4>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {modules.map((module, index) => (
-              <div key={index} className="bg-gray-100 rounded-xl border border-gray-200 p-4 flex items-center gap-4">
-                <div className={`w-10 h-10 ${module.bgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                  <div className="w-5 h-5">
+              <div key={index} className="bg-gray-100 rounded-xl border border-gray-200 p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
+                <div className={`w-8 h-8 sm:w-10 sm:h-10 ${module.bgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                  <div className="w-4 h-4 sm:w-5 sm:h-5">
                     {module.icon}
                   </div>
                 </div>
-                <span className="font-semibold text-gray-900">{module.name}</span>
+                <span className="font-semibold text-gray-900 text-sm sm:text-base">{module.name}</span>
               </div>
             ))}
           </div>
