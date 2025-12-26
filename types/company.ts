@@ -25,7 +25,7 @@ export interface CompanyContextType {
   refreshCompanies: () => Promise<void>;
   isLoading: boolean;
 }
-}
+
 
 interface User {
   id: string;
