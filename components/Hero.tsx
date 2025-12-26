@@ -90,8 +90,8 @@ export default function Hero() {
           </div>
 
           {/* Right Column - Text Content */}
-          <div className="max-w-2xl order-1 lg:order-2 px-2 sm:px-4 lg:px-8 xl:px-12 flex flex-col justify-between h-full">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-gray-900">
+          <div className="max-w-3xl order-1 lg:order-2 px-2 sm:px-4 lg:px-8 xl:px-12 flex flex-col justify-between h-full">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 leading-tight text-gray-900">
               Tu Estado de Resultados en minutos
             </h1>
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-gray-600 leading-relaxed">
@@ -108,10 +108,10 @@ export default function Hero() {
               </div>
 
               {/* CTA Button */}
-              <div className="mb-4">
-                <Link href="/signup">
-                  <button className="w-full sm:w-auto px-6 sm:px-10 lg:px-14 py-3 sm:py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg text-lg sm:text-xl lg:text-2xl xl:text-3xl flex items-center justify-center gap-2 sm:gap-3">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-3 sm:mb-4">
+                <Link href="/signup" className="inline-block">
+                  <button className="w-full sm:w-auto px-6 sm:px-8 lg:px-10 py-3 sm:py-3.5 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg text-base sm:text-lg lg:text-xl inline-flex items-center justify-center gap-2 whitespace-nowrap">
+                    <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                     </svg>
                     Crear Cuenta Gratis

@@ -191,6 +191,8 @@
 //   );
 // }
 
+
+
 export default function Features() {
   const faqs = [
     {
@@ -220,7 +222,7 @@ export default function Features() {
           <line x1="12" y1="3" x2="12" y2="15"></line>
         </svg>
       ),
-      bgColor: "bg-blue-400",
+      bgColor: "bg-blue-500",
       title: "Sube tu CSV del SII",
       description: "Registro de Compras y Ventas directo del portal"
     },
@@ -230,7 +232,7 @@ export default function Features() {
           <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
         </svg>
       ),
-      bgColor: "bg-emerald-400",
+      bgColor: "bg-emerald-500",
       title: "Clasifica una vez, automatiza siempre",
       description: "Reglas por proveedor que se aplican cada mes"
     },
@@ -243,7 +245,7 @@ export default function Features() {
           <path d="M8 17v-3"></path>
         </svg>
       ),
-      bgColor: "bg-amber-400",
+      bgColor: "bg-amber-500",
       title: "Dashboard + KPIs automáticos",
       description: "Margen bruto, EBITDA, tendencias, Top proveedores"
     }
@@ -258,7 +260,7 @@ export default function Features() {
           <line x1="9" y1="21" x2="9" y2="9"></line>
         </svg>
       ),
-      bgColor: "bg-blue-400",
+      bgColor: "bg-blue-500",
       name: "Resumen Ejecutivo"
     },
     {
@@ -270,7 +272,7 @@ export default function Features() {
           <line x1="16" y1="17" x2="8" y2="17"></line>
         </svg>
       ),
-      bgColor: "bg-emerald-400",
+      bgColor: "bg-emerald-500",
       name: "Estado de Resultados"
     },
     {
@@ -279,7 +281,7 @@ export default function Features() {
           <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
         </svg>
       ),
-      bgColor: "bg-yellow-400",
+      bgColor: "bg-yellow-500",
       name: "Clasificador"
     },
     {
@@ -291,7 +293,7 @@ export default function Features() {
           <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
         </svg>
       ),
-      bgColor: "bg-purple-400",
+      bgColor: "bg-purple-500",
       name: "Gestión RRHH"
     },
     {
@@ -301,7 +303,7 @@ export default function Features() {
           <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
         </svg>
       ),
-      bgColor: "bg-pink-400",
+      bgColor: "bg-pink-500",
       name: "CxC y CxP"
     },
     {
@@ -311,49 +313,52 @@ export default function Features() {
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
         </svg>
       ),
-      bgColor: "bg-indigo-400",
+      bgColor: "bg-indigo-500",
       name: "Configuración"
     }
   ];
 
   return (
-    <section id="features" className="py-12 sm:py-16 lg:py-20 bg-white">
-      <div className="w-full px-4 sm:px-8 lg:px-20 xl:px-40 2xl:px-60">
+    <section id="features" className="bg-white py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Left Column - FAQs */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
-            <h2 className="flex items-center gap-2 sm:gap-3 text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-              </svg>
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8 hover:shadow-xl transition-shadow">
+            <h2 className="flex items-center gap-3 text-xl sm:text-2xl font-bold text-gray-900 mb-6">
+              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
               Preguntas Frecuentes
             </h2>
             
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-gray-100 rounded-lg p-3 sm:p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{faq.question}</h4>
-                  <p className="text-xs sm:text-sm text-gray-600">{faq.answer}</p>
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 border border-gray-200 hover:border-blue-300 transition-colors">
+                  <h4 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">{faq.question}</h4>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Middle Column - Steps */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
-            <div className="space-y-3 sm:space-y-4">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8 hover:shadow-xl transition-shadow">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Cómo Funciona</h2>
+            <div className="space-y-4">
               {steps.map((step, index) => (
-                <div key={index} className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 lg:p-5 flex items-start gap-3 sm:gap-4">
-                  <div className={`w-10 h-10 sm:w-12 sm:h-12 ${step.bgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                    <div className="w-5 h-5 sm:w-6 sm:h-6">
+                <div key={index} className="bg-white rounded-xl border-2 border-gray-200 p-4 sm:p-5 flex items-start gap-4 hover:border-blue-400 hover:shadow-md transition-all">
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 ${step.bgColor} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 text-white">
                       {step.icon}
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <strong className="text-gray-900 mb-1 text-sm sm:text-base">{step.title}</strong>
-                    <span className="text-xs sm:text-sm text-gray-600">{step.description}</span>
+                    <strong className="text-gray-900 mb-1.5 text-sm sm:text-base font-bold">{step.title}</strong>
+                    <span className="text-xs sm:text-sm text-gray-600 leading-relaxed">{step.description}</span>
                   </div>
                 </div>
               ))}
@@ -361,19 +366,17 @@ export default function Features() {
           </div>
 
           {/* Right Column - Modules */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 lg:p-8">
-            <h4 className="text-xs sm:text-sm font-semibold text-gray-500 mb-4 sm:mb-6 tracking-wide">
-              6 Módulos Incluidos
-            </h4>
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8 hover:shadow-xl transition-shadow">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">6 Módulos Incluidos</h2>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {modules.map((module, index) => (
-                <div key={index} className="bg-gray-100 rounded-xl border border-gray-200 p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
-                  <div className={`w-8 h-8 sm:w-10 sm:h-10 ${module.bgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                    <div className="w-4 h-4 sm:w-5 sm:h-5">
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border-2 border-gray-200 p-4 flex flex-col items-center justify-center gap-3 hover:border-blue-400 hover:shadow-md transition-all text-center">
+                  <div className={`w-12 h-12 ${module.bgColor} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                    <div className="w-6 h-6 text-white">
                       {module.icon}
                     </div>
                   </div>
-                  <span className="font-semibold text-gray-900 text-sm sm:text-base">{module.name}</span>
+                  <span className="font-bold text-gray-900 text-xs sm:text-sm leading-tight">{module.name}</span>
                 </div>
               ))}
             </div>
