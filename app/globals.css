@@ -46,3 +46,14 @@
   --color-text-primary: var(--text-primary);
   --color-text-muted: var(--text-muted);
 }
+
+/* Hide scrollbar but keep functionality */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
